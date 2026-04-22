@@ -10,3 +10,5 @@ notes:
   - Parent add-on should sync CHANGELOG.md from this repository release flow.
   - Parent add-on must keep canonical add-on files in the parent add-on repository.
   - Parent Dockerfile should pin the upstream RSS-Bridge image ref manually.
+  - Parent add-on should treat ingress as the primary human-facing access path.
+  - Parent add-on should also support direct local HTTP access for backend integrations such as Feedreader.

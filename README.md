@@ -55,7 +55,9 @@ That means:
 The recommended approach for this wrapper is to use the official upstream
 container image and add only a thin Home Assistant wrapper on top:
 
-- ingress-first access
+- ingress as the primary access path for human use in Home Assistant
+- additional direct local HTTP access for machine-to-machine consumers such as
+  Feedreader or other backend integrations
 - persistent storage under `/data/rss-bridge`
 - generated `config.ini.php` for safe defaults
 - clear startup logs
@@ -64,6 +66,21 @@ container image and add only a thin Home Assistant wrapper on top:
 This keeps the add-on simpler than rebuilding RSS-Bridge from source while
 still allowing the parent repository to remain the canonical add-on source of
 truth.
+
+## Access model
+
+The child repository should describe the wrapper as supporting two complementary
+access patterns:
+
+- ingress remains the preferred path for human interaction with the RSS-Bridge
+  UI inside Home Assistant
+- direct local HTTP access remains available for integrations that need to
+  consume feeds over the Home Assistant network without going through the human
+  ingress flow
+
+This repository documents that behavior as wrapper context only. The canonical
+published add-on files that implement and expose that access model still belong
+to the parent repository.
 
 ## Authentication behavior
 
