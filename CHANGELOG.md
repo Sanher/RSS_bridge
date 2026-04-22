@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.3
+
+- Clarify the wrapper context so the parent add-on can remain ingress-friendly
+  for humans while also supporting direct local HTTP access for backend
+  consumers such as Feedreader.
+- Keep the child repository focused on wrapper documentation and coordination
+  without moving canonical add-on ownership out of the parent repository.
+
 ## 0.1.2
 
 - Prioritize `/app/docker-entrypoint.sh` when resolving the upstream RSS-Bridge entrypoint.

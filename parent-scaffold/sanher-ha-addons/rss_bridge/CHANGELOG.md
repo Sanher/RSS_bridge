@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Clarify the add-on context so ingress remains the preferred human access path
+  while local direct HTTP access can also serve backend integrations such as
+  Feedreader.
+
 ## 0.1.2
 
 - Resolve the official RSS-Bridge entrypoint from `/app/docker-entrypoint.sh` before the fallback paths.
