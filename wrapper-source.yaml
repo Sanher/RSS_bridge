@@ -1,0 +1,12 @@
+wrapper_name: rss_bridge
+wrapper_type: home_assistant_wrapper_source
+upstream_repo: https://github.com/RSS-Bridge/rss-bridge
+upstream_release: 2025-08-05
+upstream_image: ghcr.io/rss-bridge/rss-bridge
+upstream_image_ref: sha-f10e8cd
+runtime_entrypoint: run.sh
+notes:
+  - Parent add-on should sync visible version from this repository tag.
+  - Parent add-on should sync CHANGELOG.md from this repository release flow.
+  - Parent add-on must keep canonical add-on files in the parent add-on repository.
+  - Parent Dockerfile should pin the upstream RSS-Bridge image ref manually.
