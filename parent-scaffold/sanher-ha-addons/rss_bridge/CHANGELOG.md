@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Resolve the official RSS-Bridge entrypoint from `/app/docker-entrypoint.sh` before the fallback paths.
+- Keep the wrapper compatible with the previous fallback lookup through `PATH` and `/docker-entrypoint.sh`.
+
 ## 0.1.1
 
 - Escape `auth_token` before writing the managed `config.ini.php`.
