@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Escape `auth_token` before writing the managed `config.ini.php`.
+- Keep token-based authentication compatible with quotes, backslashes, spaces,
+  and line breaks in the configured value.
+
 ## 0.1.0
 
 - Add the initial RSS Bridge Home Assistant add-on scaffold.

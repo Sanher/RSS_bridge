@@ -113,6 +113,7 @@ sync_runtime_config() {
 generate_config() {
   timezone="$(option_string timezone "UTC")"
   auth_token="$(option_string auth_token "")"
+  auth_token_escaped="$(printf '%s' "$auth_token" | tr -d '\r' | tr '\n' ' ' | sed 's/\\/\\\\/g; s/"/\\"/g')"
   debug_mode="$(option_bool debug false)"
   env_mode="prod"
   auth_enabled="false"
@@ -148,7 +149,7 @@ enable_purge = true
 enable = ${auth_enabled}
 username = "admin"
 password = ""
-token = "${auth_token}"
+token = "${auth_token_escaped}"
 
 [error]
 output = "feed"
